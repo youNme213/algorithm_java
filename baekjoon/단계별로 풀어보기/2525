@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+        int hour = s.nextInt();
+        int min = s.nextInt();
+        int cookingTime = s.nextInt();
+        s.close();
+        
+        min = (hour*60) + min + cookingTime;
+        hour = (min / 60) % 24;
+        
+        min = min % 60;     
+        
+        System.out.print(hour + " " + min);
+	}
+}
